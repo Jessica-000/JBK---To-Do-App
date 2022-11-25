@@ -1,11 +1,10 @@
 
- function Removetodo(id) {
+ const Removetodo = (id,) => {
     fetch(`http://localhost:5001/post/delete/${id}`, {
         method: 'DELETE'
     })
-    .then(res => res.json())
 .then((res) => {
-  console.log(res)
+  console.log("Deleted", res).cath(err => console.log(err))
 })
  }
 
